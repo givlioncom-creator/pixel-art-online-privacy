@@ -2,325 +2,356 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Pixel Art Online</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Pixel Art Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: #0F0F1A;
-      color: #E5E7EB;
-      font-family: 'Courier New', monospace;
-      line-height: 1.8;
-      padding: 0;
-    }
+        body {
+            background: #0F0F1A;
+            color: #E5E7EB;
+            /* Увеличен базовый шрифт для лучшей читаемости */
+            font-family: 'Courier New', monospace;
+            line-height: 1.65;
+            font-size: 18px;  /* был ~13px, теперь комфортный размер */
+            padding: 0;
+        }
 
-    header {
-      background: #1A1A2E;
-      border-bottom: 1px solid #2D2D4E;
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+        header {
+            background: #1A1A2E;
+            border-bottom: 1px solid #2D2D4E;
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
 
-    .logo-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 10px);
-      grid-template-rows: repeat(4, 10px);
-      gap: 2px;
-    }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 12px);
+            grid-template-rows: repeat(4, 12px);
+            gap: 2px;
+        }
 
-    .logo-grid div {
-      border-radius: 2px;
-      background: #1A1A2E;
-      border: 0.5px solid #2D2D4E;
-    }
+        .logo-grid div {
+            border-radius: 2px;
+            background: #1A1A2E;
+            border: 0.5px solid #2D2D4E;
+        }
 
-    .logo-grid .r {
-      background: #E24B4A;
-      border: none;
-    }
+        .logo-grid .r {
+            background: #E24B4A;
+            border: none;
+        }
 
-    .logo-grid .b {
-      background: #378ADD;
-      border: none;
-    }
+        .logo-grid .b {
+            background: #378ADD;
+            border: none;
+        }
 
-    .logo-grid .g {
-      background: #1D9E75;
-      border: none;
-    }
+        .logo-grid .g {
+            background: #1D9E75;
+            border: none;
+        }
 
-    .logo-grid .y {
-      background: #EF9F27;
-      border: none;
-    }
+        .logo-grid .y {
+            background: #EF9F27;
+            border: none;
+        }
 
-    .logo-grid .p {
-      background: #D4537E;
-      border: none;
-    }
+        .logo-grid .p {
+            background: #D4537E;
+            border: none;
+        }
 
-    .header-title {
-      display: flex;
-      flex-direction: column;
-    }
+        .header-title {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .header-title span:first-child {
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      letter-spacing: 3px;
-    }
+        .header-title span:first-child {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 4px;
+        }
 
-    .header-title span:last-child {
-      font-size: 10px;
-      color: #6366F1;
-      letter-spacing: 6px;
-    }
+        .header-title span:last-child {
+            font-size: 12px;
+            color: #6366F1;
+            letter-spacing: 7px;
+        }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 24px 60px;
-    }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 48px 28px 70px;
+        }
 
-    h1 {
-      font-size: 22px;
-      color: #fff;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
+        h1 {
+            font-size: 32px;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
 
-    .updated {
-      font-size: 12px;
-      color: #4B5563;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #2D2D4E;
-    }
+        .updated {
+            font-size: 15px;
+            color: #6B7280;
+            margin-bottom: 44px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #2D2D4E;
+        }
 
-    h2 {
-      font-size: 13px;
-      color: #6366F1;
-      letter-spacing: 2px;
-      margin: 32px 0 12px;
-      text-transform: uppercase;
-    }
+        h2 {
+            font-size: 20px;
+            color: #818CF8;
+            letter-spacing: 2px;
+            margin: 44px 0 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
 
-    p {
-      font-size: 13px;
-      color: #9CA3AF;
-      margin-bottom: 12px;
-    }
+        p {
+            font-size: 18px;
+            color: #C9D1E0;
+            margin-bottom: 16px;
+            line-height: 1.65;
+        }
 
-    ul {
-      list-style: none;
-      margin-bottom: 12px;
-    }
+        ul {
+            list-style: none;
+            margin-bottom: 16px;
+        }
 
-    ul li {
-      font-size: 13px;
-      color: #9CA3AF;
-      padding: 4px 0;
-      padding-left: 16px;
-      position: relative;
-    }
+        ul li {
+            font-size: 18px;
+            color: #C9D1E0;
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.55;
+        }
 
-    ul li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: #4B5563;
-    }
+        ul li::before {
+            content: '—';
+            position: absolute;
+            left: 4px;
+            color: #6B7280;
+            font-size: 18px;
+        }
 
-    .pill {
-      display: inline-block;
-      background: #1A1A2E;
-      border: 1px solid #2D2D4E;
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 11px;
-      color: #9CA3AF;
-      margin-bottom: 32px;
-    }
+        .pill {
+            display: inline-block;
+            background: #1A1A2E;
+            border: 1px solid #2D2D4E;
+            border-radius: 40px;
+            padding: 6px 18px;
+            font-size: 15px;
+            color: #A5B4FC;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
 
-    .contact-box {
-      background: #1A1A2E;
-      border: 1px solid #2D2D4E;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-top: 32px;
-    }
+        .contact-box {
+            background: #1A1A2E;
+            border: 1px solid #2D2D4E;
+            border-radius: 16px;
+            padding: 26px 28px;
+            margin-top: 38px;
+        }
 
-    .contact-box p {
-      margin: 0;
-    }
+        .contact-box p {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+        }
 
-    .contact-box a {
-      color: #6366F1;
-      text-decoration: none;
-    }
+        .contact-box a {
+            color: #818CF8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            border-bottom: 1px dotted #4B5563;
+        }
 
-    footer {
-      background: #1A1A2E;
-      border-top: 1px solid #2D2D4E;
-      padding: 16px 24px;
-      text-align: center;
-      font-size: 11px;
-      color: #374151;
-    }
-  </style>
+        .contact-box a:hover {
+            color: #A78BFA;
+            border-bottom-color: #818CF8;
+        }
+
+        footer {
+            background: #1A1A2E;
+            border-top: 1px solid #2D2D4E;
+            padding: 22px 28px;
+            text-align: center;
+            font-size: 14px;
+            color: #4B5563;
+            letter-spacing: 0.8px;
+        }
+
+        /* мелкие донастройки для ссылок в тексте */
+        a {
+            color: #818CF8;
+            text-decoration: none;
+            border-bottom: 1px dotted #4B5563;
+        }
+
+        a:hover {
+            color: #A78BFA;
+        }
+
+        strong {
+            color: #F3F4F6;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo-grid">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div class="r"></div>
-      <div></div>
-      <div class="b"></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div class="g"></div>
-      <div class="p"></div>
-      <div class="y"></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <header>
+        <div class="logo-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="r"></div>
+            <div></div>
+            <div class="b"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="g"></div>
+            <div class="p"></div>
+            <div class="y"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header-title">
+            <span>PIXEL ART</span>
+            <span>ONLINE</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <h1>PRIVACY POLICY</h1>
+        <div class="updated">Последнее обновление: 29 мая 2026 г.</div>
+
+        <p>
+            Добро пожаловать в <strong>Pixel Art Online</strong> — совместную пиксельную игру для
+            Android.
+            Настоящая политика конфиденциальности объясняет, какие данные мы собираем, как используем и как защищаем их.
+        </p>
+
+        <div class="pill">Version 1.21</div>
+
+        <h2>1. Данные которые мы собираем</h2>
+        <p>Мы собираем минимальный объём данных необходимых для работы приложения:</p>
+        <ul>
+            <li>Имя пользователя (никнейм) — вводится добровольно при входе в онлайн режим. Не является обязательным и
+                не связывается с реальной личностью.</li>
+            <li>Игровые данные — координаты и цвет пикселей которые вы размещаете на игровом поле.</li>
+            <li>Статистика — количество пикселей размещённых вами в игре.</li>
+            <li>Данные присутствия — факт нахождения в онлайн режиме (без идентификатора устройства или IP-адреса).</li>
+        </ul>
+
+        <h2>2. Данные которые мы НЕ собираем</h2>
+        <ul>
+            <li>Имя, фамилия, email, номер телефона</li>
+            <li>Геолокация</li>
+            <li>Идентификатор устройства или рекламный ID</li>
+            <li>Данные о платежах</li>
+            <li>Контакты или файлы устройства</li>
+            <li>История браузера или других приложений</li>
+        </ul>
+
+        <h2>3. Как мы используем данные</h2>
+        <ul>
+            <li>Отображение игрового поля в реальном времени для всех игроков</li>
+            <li>Ведение таблицы лидеров по никнейму</li>
+            <li>Синхронизация состояния игры между устройствами</li>
+        </ul>
+
+        <h2>4. Хранение данных</h2>
+        <p>
+            Все игровые данные хранятся в <strong>Firebase Realtime Database</strong> (Google LLC).
+            Серверы расположены в соответствии с политикой Google Firebase.
+            Никнейм и игровые данные хранятся до момента сброса игрового поля или удаления приложения.
+        </p>
+        <p>
+            Данные тренировочного режима хранятся исключительно на вашем устройстве
+            и не передаются на серверы.
+        </p>
+
+        <h2>5. Передача данных третьим лицам</h2>
+        <p>
+            Мы не продаём, не передаём и не раскрываем ваши данные третьим лицам.
+            Единственный сторонний сервис используемый приложением — Firebase (Google LLC),
+            политика конфиденциальности которого доступна по адресу:
+            <a href="https://firebase.google.com/support/privacy" target="_blank">
+                firebase.google.com/support/privacy
+            </a>
+        </p>
+
+        <h2>6. Уведомления</h2>
+        <p>
+            Приложение может отправлять push-уведомления о завершении кулдауна.
+            Разрешение на уведомления запрашивается явно и может быть отозвано
+            в настройках устройства в любой момент.
+        </p>
+
+        <h2>7. Дети</h2>
+        <p>
+            Приложение не предназначено специально для детей до 13 лет.
+            Мы не собираем намеренно данные от детей.
+            Если вам стало известно что ребёнок предоставил нам данные —
+            пожалуйста свяжитесь с нами для их удаления.
+        </p>
+
+        <h2>8. Безопасность</h2>
+        <p>
+            Мы используем стандартные меры безопасности Firebase для защиты данных.
+            Однако ни один метод передачи данных через интернет не является
+            абсолютно защищённым. Мы делаем всё возможное для защиты ваших данных,
+            но не можем гарантировать абсолютную безопасность.
+        </p>
+
+        <h2>9. Изменения политики</h2>
+        <p>
+            Мы можем обновлять настоящую политику конфиденциальности.
+            Изменения публикуются на этой странице с обновлённой датой вверху.
+            Продолжение использования приложения после изменений означает
+            ваше согласие с новой версией политики.
+        </p>
+
+        <h2>10. Ваши права</h2>
+        <p>Вы имеете право:</p>
+        <ul>
+            <li>Узнать какие данные о вас хранятся</li>
+            <li>Запросить удаление ваших данных</li>
+            <li>Отозвать согласие на уведомления в настройках устройства</li>
+            <li>Удалить приложение — данные тренировочного режима удалятся автоматически</li>
+        </ul>
+
+        <h2>11. Контакты</h2>
+        <div class="contact-box">
+            <p>По вопросам конфиденциальности свяжитесь с нами:</p>
+            <p>Email: <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a></p>
+        </div>
+
     </div>
-    <div class="header-title">
-      <span>PIXEL ART</span>
-      <span>ONLINE</span>
-    </div>
-  </header>
 
-  <div class="container">
-
-    <h1>PRIVACY POLICY</h1>
-    <div class="updated">Последнее обновление: 29 мая 2026 г.</div>
-
-    <p>
-      Добро пожаловать в <strong style="color:#fff;">Pixel Art Online</strong> — совместную пиксельную игру для Android.
-      Настоящая политика конфиденциальности объясняет, какие данные мы собираем, как используем и как защищаем их.
-    </p>
-
-    <div class="pill">Version 1.21</div>
-
-    <h2>1. Данные которые мы собираем</h2>
-    <p>Мы собираем минимальный объём данных необходимых для работы приложения:</p>
-    <ul>
-      <li>Имя пользователя (никнейм) — вводится добровольно при входе в онлайн режим. Не является обязательным и не
-        связывается с реальной личностью.</li>
-      <li>Игровые данные — координаты и цвет пикселей которые вы размещаете на игровом поле.</li>
-      <li>Статистика — количество пикселей размещённых вами в игре.</li>
-      <li>Данные присутствия — факт нахождения в онлайн режиме (без идентификатора устройства или IP-адреса).</li>
-    </ul>
-
-    <h2>2. Данные которые мы НЕ собираем</h2>
-    <ul>
-      <li>Имя, фамилия, email, номер телефона</li>
-      <li>Геолокация</li>
-      <li>Идентификатор устройства или рекламный ID</li>
-      <li>Данные о платежах</li>
-      <li>Контакты или файлы устройства</li>
-      <li>История браузера или других приложений</li>
-    </ul>
-
-    <h2>3. Как мы используем данные</h2>
-    <ul>
-      <li>Отображение игрового поля в реальном времени для всех игроков</li>
-      <li>Ведение таблицы лидеров по никнейму</li>
-      <li>Синхронизация состояния игры между устройствами</li>
-    </ul>
-
-    <h2>4. Хранение данных</h2>
-    <p>
-      Все игровые данные хранятся в <strong style="color:#fff;">Firebase Realtime Database</strong> (Google LLC).
-      Серверы расположены в соответствии с политикой Google Firebase.
-      Никнейм и игровые данные хранятся до момента сброса игрового поля или удаления приложения.
-    </p>
-    <p>
-      Данные тренировочного режима хранятся исключительно на вашем устройстве
-      и не передаются на серверы.
-    </p>
-
-    <h2>5. Передача данных третьим лицам</h2>
-    <p>
-      Мы не продаём, не передаём и не раскрываем ваши данные третьим лицам.
-      Единственный сторонний сервис используемый приложением — Firebase (Google LLC),
-      политика конфиденциальности которого доступна по адресу:
-      <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:#6366F1;">
-        firebase.google.com/support/privacy
-      </a>
-    </p>
-
-    <h2>6. Уведомления</h2>
-    <p>
-      Приложение может отправлять push-уведомления о завершении кулдауна.
-      Разрешение на уведомления запрашивается явно и может быть отозвано
-      в настройках устройства в любой момент.
-    </p>
-
-    <h2>7. Дети</h2>
-    <p>
-      Приложение не предназначено специально для детей до 13 лет.
-      Мы не собираем намеренно данные от детей.
-      Если вам стало известно что ребёнок предоставил нам данные —
-      пожалуйста свяжитесь с нами для их удаления.
-    </p>
-
-    <h2>8. Безопасность</h2>
-    <p>
-      Мы используем стандартные меры безопасности Firebase для защиты данных.
-      Однако ни один метод передачи данных через интернет не является
-      абсолютно защищённым. Мы делаем всё возможное для защиты ваших данных,
-      но не можем гарантировать абсолютную безопасность.
-    </p>
-
-    <h2>9. Изменения политики</h2>
-    <p>
-      Мы можем обновлять настоящую политику конфиденциальности.
-      Изменения публикуются на этой странице с обновлённой датой вверху.
-      Продолжение использования приложения после изменений означает
-      ваше согласие с новой версией политики.
-    </p>
-
-    <h2>10. Ваши права</h2>
-    <p>Вы имеете право:</p>
-    <ul>
-      <li>Узнать какие данные о вас хранятся</li>
-      <li>Запросить удаление ваших данных</li>
-      <li>Отозвать согласие на уведомления в настройках устройства</li>
-      <li>Удалить приложение — данные тренировочного режима удалятся автоматически</li>
-    </ul>
-
-    <h2>11. Контакты</h2>
-    <div class="contact-box">
-      <p>По вопросам конфиденциальности свяжитесь с нами:</p>
-      <br>
-      <p>Email: <a href="givlion.com@gmail.com"></a>givlion.com@gmail.com</p>
-      
-
-      </p>
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 Pixel Art Online · Privacy Policy
-  </footer>
+    <footer>
+        © 2026 Pixel Art Online · Privacy Policy
+    </footer>
 
 </body>
 
