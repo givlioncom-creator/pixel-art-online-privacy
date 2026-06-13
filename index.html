@@ -15,10 +15,9 @@
         body {
             background: #0F0F1A;
             color: #E5E7EB;
-            /* Увеличен базовый шрифт для лучшей читаемости */
             font-family: 'Courier New', monospace;
             line-height: 1.65;
-            font-size: 18px;  /* был ~13px, теперь комфортный размер */
+            font-size: 18px;
             padding: 0;
         }
 
@@ -44,30 +43,11 @@
             border: 0.5px solid #2D2D4E;
         }
 
-        .logo-grid .r {
-            background: #E24B4A;
-            border: none;
-        }
-
-        .logo-grid .b {
-            background: #378ADD;
-            border: none;
-        }
-
-        .logo-grid .g {
-            background: #1D9E75;
-            border: none;
-        }
-
-        .logo-grid .y {
-            background: #EF9F27;
-            border: none;
-        }
-
-        .logo-grid .p {
-            background: #D4537E;
-            border: none;
-        }
+        .logo-grid .r { background: #E24B4A; border: none; }
+        .logo-grid .b { background: #378ADD; border: none; }
+        .logo-grid .g { background: #1D9E75; border: none; }
+        .logo-grid .y { background: #EF9F27; border: none; }
+        .logo-grid .p { background: #D4537E; border: none; }
 
         .header-title {
             display: flex;
@@ -85,6 +65,34 @@
             font-size: 12px;
             color: #6366F1;
             letter-spacing: 7px;
+        }
+
+        /* Language switcher — pushed to the right edge of the header */
+        .lang-switch {
+            margin-left: auto;
+            display: flex;
+            gap: 6px;
+        }
+
+        .lang-switch button {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #6B7280;
+            background: #0F0F1A;
+            border: 1px solid #2D2D4E;
+            border-radius: 8px;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .lang-switch button:hover { color: #A5B4FC; }
+
+        .lang-switch button.active {
+            color: #fff;
+            background: #4F46E5;
+            border-color: #4F46E5;
         }
 
         .container {
@@ -195,149 +203,242 @@
             letter-spacing: 0.8px;
         }
 
-        /* мелкие донастройки для ссылок в тексте */
         a {
             color: #818CF8;
             text-decoration: none;
             border-bottom: 1px dotted #4B5563;
         }
 
-        a:hover {
-            color: #A78BFA;
-        }
+        a:hover { color: #A78BFA; }
 
         strong {
             color: #F3F4F6;
             font-weight: 600;
         }
+
+        /* Language visibility — default RU shown, EN hidden until toggled */
+        body[data-lang="ru"] .lang-en { display: none; }
+        body[data-lang="en"] .lang-ru { display: none; }
     </style>
 </head>
 
-<body>
+<body data-lang="ru">
 
     <header>
         <div class="logo-grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="r"></div>
-            <div></div>
-            <div class="b"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="g"></div>
-            <div class="p"></div>
-            <div class="y"></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div></div><div></div><div></div><div class="r"></div>
+            <div></div><div class="b"></div><div></div><div></div>
+            <div></div><div></div><div class="g"></div><div class="p"></div>
+            <div class="y"></div><div></div><div></div><div></div>
         </div>
         <div class="header-title">
             <span>PIXEL ART</span>
             <span>ONLINE</span>
         </div>
+        <div class="lang-switch">
+            <button id="btn-ru" class="active" onclick="setLang('ru')">RU</button>
+            <button id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
     </header>
 
     <div class="container">
 
-        <h1>PRIVACY POLICY</h1>
-        <div class="updated">Дата вступления в силу: 13 июня 2026 г.</div>
+        <!-- ───────────────────────── RUSSIAN ───────────────────────── -->
+        <div class="lang-ru">
+            <h1>PRIVACY POLICY</h1>
+            <div class="updated">Дата вступления в силу: 13 июня 2026 г.</div>
 
-        <p>
-            Настоящая Политика конфиденциальности описывает, какие данные обрабатывает мобильное
-            приложение <strong>Pixel Art Online</strong> (далее — «Приложение») и как они используются.
-            Устанавливая и используя Приложение, вы соглашаетесь с условиями настоящей Политики.
-        </p>
-        <p>
-            Разработчик: Roman Gonhar (далее — «мы»). Контакт для обращений:
-            <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a>
-        </p>
+            <p>
+                Настоящая Политика конфиденциальности описывает, какие данные обрабатывает мобильное
+                приложение <strong>Pixel Art Online</strong> (далее — «Приложение») и как они используются.
+                Устанавливая и используя Приложение, вы соглашаетесь с условиями настоящей Политики.
+            </p>
+            <p>
+                Разработчик: Roman Gonhar (далее — «мы»). Контакт для обращений:
+                <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a>
+            </p>
 
-        <div class="pill">Version 2.4.0</div>
+            <div class="pill">Version 2.4.0</div>
 
-        <h2>1. Какие данные мы обрабатываем</h2>
-        <p>
-            Приложение не требует регистрации и не собирает персональные данные, позволяющие
-            напрямую идентифицировать вас (имя, телефон, email, адрес). Обрабатываются следующие данные:
-        </p>
-        <ul>
-            <li><strong>Анонимный идентификатор (uid).</strong> При первом запуске создаётся случайный
-                анонимный идентификатор через Firebase Authentication. Он не связан с вашей личностью и
-                используется, чтобы вести счёт поставленных пикселей и присутствие в онлайн-режиме.</li>
-            <li><strong>Никнейм.</strong> Имя, которое вы вводите для онлайн-режима и событий. Оно
-                отображается публично в таблице лидеров и видно другим игрокам. Не указывайте в нём
-                персональные данные.</li>
-            <li><strong>Пиксели на общем холсте.</strong> В онлайн-режиме и в событиях поставленные вами
-                пиксели (координата и цвет) сохраняются на сервере и видны всем участникам.</li>
-            <li><strong>Данные об использовании (аналитика).</strong> Через Firebase Analytics собираются
-                обезличенные события: открытие экранов, первый поставленный пиксель, открытие таблицы
-                лидеров, сохранение/публикация рисунка, использование функций. Эти события привязаны к
-                анонимному uid, а не к вашей личности.</li>
-            <li><strong>Отчёты о сбоях.</strong> Через Firebase Crashlytics собирается техническая
-                информация о сбоях приложения (модель устройства, версия ОС, стек ошибки) для устранения
-                неполадок.</li>
-        </ul>
+            <h2>1. Какие данные мы обрабатываем</h2>
+            <p>
+                Приложение не требует регистрации и не собирает персональные данные, позволяющие
+                напрямую идентифицировать вас (имя, телефон, email, адрес). Обрабатываются следующие данные:
+            </p>
+            <ul>
+                <li><strong>Анонимный идентификатор (uid).</strong> При первом запуске создаётся случайный
+                    анонимный идентификатор через Firebase Authentication. Он не связан с вашей личностью и
+                    используется, чтобы вести счёт поставленных пикселей и присутствие в онлайн-режиме.</li>
+                <li><strong>Никнейм.</strong> Имя, которое вы вводите для онлайн-режима и событий. Оно
+                    отображается публично в таблице лидеров и видно другим игрокам. Не указывайте в нём
+                    персональные данные.</li>
+                <li><strong>Пиксели на общем холсте.</strong> В онлайн-режиме и в событиях поставленные вами
+                    пиксели (координата и цвет) сохраняются на сервере и видны всем участникам.</li>
+                <li><strong>Данные об использовании (аналитика).</strong> Через Firebase Analytics собираются
+                    обезличенные события: открытие экранов, первый поставленный пиксель, открытие таблицы
+                    лидеров, сохранение/публикация рисунка, использование функций. Эти события привязаны к
+                    анонимному uid, а не к вашей личности.</li>
+                <li><strong>Отчёты о сбоях.</strong> Через Firebase Crashlytics собирается техническая
+                    информация о сбоях приложения (модель устройства, версия ОС, стек ошибки) для устранения
+                    неполадок.</li>
+            </ul>
 
-        <h2>2. Данные, которые остаются только на вашем устройстве</h2>
-        <p>Следующее <strong>не передаётся</strong> на наши серверы и хранится локально на устройстве:</p>
-        <ul>
-            <li>ваши рисунки, проекты анимаций и таймлапсы (в памяти приложения);</li>
-            <li>настройки (звук, язык, тема, уведомления);</li>
-            <li>выбранные фотографии для режима «Фото» — они обрабатываются локально для создания
-                пиксель-арта и <strong>не загружаются</strong> на сервер.</li>
-        </ul>
+            <h2>2. Данные, которые остаются только на вашем устройстве</h2>
+            <p>Следующее <strong>не передаётся</strong> на наши серверы и хранится локально на устройстве:</p>
+            <ul>
+                <li>ваши рисунки, проекты анимаций и таймлапсы (в памяти приложения);</li>
+                <li>настройки (звук, язык, тема, уведомления);</li>
+                <li>выбранные фотографии для режима «Фото» — они обрабатываются локально для создания
+                    пиксель-арта и <strong>не загружаются</strong> на сервер.</li>
+            </ul>
 
-        <h2>3. Разрешения устройства</h2>
-        <ul>
-            <li><strong>Доступ к фото/медиа</strong> — используется только когда вы сами выбираете
-                фотографию для режима «Фото» или сохраняете рисунок в галерею устройства. Фотографии не
-                передаются третьим лицам и не загружаются на сервер.</li>
-            <li><strong>Уведомления</strong> — необязательны; используются только для напоминания, что
-                «пиксель восстановился» в онлайн-режиме/событии. Можно отключить в настройках.</li>
-        </ul>
+            <h2>3. Разрешения устройства</h2>
+            <ul>
+                <li><strong>Доступ к фото/медиа</strong> — используется только когда вы сами выбираете
+                    фотографию для режима «Фото» или сохраняете рисунок в галерею устройства. Фотографии не
+                    передаются третьим лицам и не загружаются на сервер.</li>
+                <li><strong>Уведомления</strong> — необязательны; используются только для напоминания, что
+                    «пиксель восстановился» в онлайн-режиме/событии. Можно отключить в настройках.</li>
+            </ul>
 
-        <h2>4. Кому передаются данные</h2>
-        <p>
-            Мы не продаём и не передаём ваши данные третьим лицам в рекламных целях.
-            Для работы Приложения данные обрабатываются сервисами <strong>Google Firebase</strong>
-            (Authentication, Realtime Database, Analytics, Crashlytics) как обработчиком данных.
-            Политика Google: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
-        </p>
+            <h2>4. Кому передаются данные</h2>
+            <p>
+                Мы не продаём и не передаём ваши данные третьим лицам в рекламных целях.
+                Для работы Приложения данные обрабатываются сервисами <strong>Google Firebase</strong>
+                (Authentication, Realtime Database, Analytics, Crashlytics) как обработчиком данных.
+                Политика Google: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+            </p>
 
-        <h2>5. Хранение и удаление</h2>
-        <p>
-            Данные общего холста и таблицы лидеров хранятся, пока существует соответствующий
-            режим/событие. Чтобы запросить удаление связанных с вашим анонимным идентификатором данных
-            (счёт, присутствие, никнейм), напишите на
-            <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a>. Локальные данные удаляются
-            при удалении Приложения с устройства.
-        </p>
+            <h2>5. Хранение и удаление</h2>
+            <p>
+                Данные общего холста и таблицы лидеров хранятся, пока существует соответствующий
+                режим/событие. Чтобы запросить удаление связанных с вашим анонимным идентификатором данных
+                (счёт, присутствие, никнейм), напишите на
+                <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a>. Локальные данные удаляются
+                при удалении Приложения с устройства.
+            </p>
 
-        <h2>6. Дети</h2>
-        <p>
-            Приложение не предназначено для целенаправленного сбора данных детей. Мы не собираем
-            персональные данные осознанно. Если никнейм вводит ребёнок, просим не указывать в нём
-            личную информацию.
-        </p>
+            <h2>6. Дети</h2>
+            <p>
+                Приложение не предназначено для целенаправленного сбора данных детей. Мы не собираем
+                персональные данные осознанно. Если никнейм вводит ребёнок, просим не указывать в нём
+                личную информацию.
+            </p>
 
-        <h2>7. Безопасность</h2>
-        <p>
-            Передача данных осуществляется по защищённым соединениям (HTTPS/TLS). Доступ к записи на
-            общий холст требует анонимной авторизации; действуют серверные правила валидации.
-        </p>
+            <h2>7. Безопасность</h2>
+            <p>
+                Передача данных осуществляется по защищённым соединениям (HTTPS/TLS). Доступ к записи на
+                общий холст требует анонимной авторизации; действуют серверные правила валидации.
+            </p>
 
-        <h2>8. Изменения</h2>
-        <p>
-            Мы можем обновлять настоящую Политику. Актуальная версия всегда доступна по адресу
-            публикации Политики; дата вступления в силу указана в начале документа.
-        </p>
+            <h2>8. Изменения</h2>
+            <p>
+                Мы можем обновлять настоящую Политику. Актуальная версия всегда доступна по адресу
+                публикации Политики; дата вступления в силу указана в начале документа.
+            </p>
 
-        <h2>9. Контакты</h2>
-        <div class="contact-box">
-            <p>По любым вопросам о конфиденциальности свяжитесь с нами:</p>
-            <p>Email: <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a></p>
+            <h2>9. Контакты</h2>
+            <div class="contact-box">
+                <p>По любым вопросам о конфиденциальности свяжитесь с нами:</p>
+                <p>Email: <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- ───────────────────────── ENGLISH ───────────────────────── -->
+        <div class="lang-en">
+            <h1>PRIVACY POLICY</h1>
+            <div class="updated">Effective date: June 13, 2026</div>
+
+            <p>
+                This Privacy Policy describes what data the <strong>Pixel Art Online</strong> mobile
+                application (the “App”) processes and how it is used. By installing and using the App, you
+                agree to the terms of this Policy.
+            </p>
+            <p>
+                Developer: Roman Gonhar (“we”). Contact:
+                <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a>
+            </p>
+
+            <div class="pill">Version 2.4.0</div>
+
+            <h2>1. Data we process</h2>
+            <p>
+                The App requires no registration and does not collect personal data that directly identifies
+                you (name, phone, email, address). The following data is processed:
+            </p>
+            <ul>
+                <li><strong>Anonymous identifier (uid).</strong> On first launch a random anonymous identifier
+                    is created via Firebase Authentication. It is not tied to your identity and is used to keep
+                    your placed-pixel score and your presence in online mode.</li>
+                <li><strong>Nickname.</strong> The name you enter for online mode and events. It is shown
+                    publicly on the leaderboard and visible to other players. Do not put personal data in it.</li>
+                <li><strong>Pixels on the shared canvas.</strong> In online mode and events, the pixels you
+                    place (coordinate and color) are stored on the server and visible to all participants.</li>
+                <li><strong>Usage data (analytics).</strong> Firebase Analytics collects anonymized events:
+                    screen opens, first pixel placed, leaderboard opens, saving/sharing a drawing, feature
+                    usage. These events are tied to the anonymous uid, not to your identity.</li>
+                <li><strong>Crash reports.</strong> Firebase Crashlytics collects technical crash information
+                    (device model, OS version, error stack) to troubleshoot issues.</li>
+            </ul>
+
+            <h2>2. Data that stays only on your device</h2>
+            <p>The following is <strong>not sent</strong> to our servers and is stored locally on your device:</p>
+            <ul>
+                <li>your drawings, animation projects, and timelapses (in app storage);</li>
+                <li>settings (sound, language, theme, notifications);</li>
+                <li>photos you select for “Photo” mode — they are processed locally to create pixel art and
+                    are <strong>not uploaded</strong> to any server.</li>
+            </ul>
+
+            <h2>3. Device permissions</h2>
+            <ul>
+                <li><strong>Photos/media access</strong> — used only when you select a photo for “Photo” mode
+                    or save a drawing to your device gallery. Photos are not shared with third parties and are
+                    not uploaded to any server.</li>
+                <li><strong>Notifications</strong> — optional; used only to remind you that a “pixel has
+                    recharged” in online mode/events. Can be disabled in settings.</li>
+            </ul>
+
+            <h2>4. Who data is shared with</h2>
+            <p>
+                We do not sell or share your data with third parties for advertising. To operate the App, data
+                is processed by <strong>Google Firebase</strong> (Authentication, Realtime Database, Analytics,
+                Crashlytics) as a data processor.
+                Google’s policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+            </p>
+
+            <h2>5. Storage and deletion</h2>
+            <p>
+                Shared-canvas and leaderboard data is stored for as long as the corresponding mode/event
+                exists. To request deletion of data associated with your anonymous identifier (score,
+                presence, nickname), email
+                <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a>. Local data is deleted when
+                you uninstall the App.
+            </p>
+
+            <h2>6. Children</h2>
+            <p>
+                The App is not intended to deliberately collect children’s data. We do not knowingly collect
+                personal data. If a child enters a nickname, please do not include personal information in it.
+            </p>
+
+            <h2>7. Security</h2>
+            <p>
+                Data is transmitted over secure connections (HTTPS/TLS). Writing to the shared canvas requires
+                anonymous authentication; server-side validation rules apply.
+            </p>
+
+            <h2>8. Changes</h2>
+            <p>
+                We may update this Policy. The current version is always available at the Policy’s published
+                address; the effective date is shown at the top of the document.
+            </p>
+
+            <h2>9. Contact</h2>
+            <div class="contact-box">
+                <p>For any privacy questions, contact us:</p>
+                <p>Email: <a href="mailto:givlion.com@gmail.com">givlion.com@gmail.com</a></p>
+            </div>
         </div>
 
     </div>
@@ -345,6 +446,25 @@
     <footer>
         © 2026 Pixel Art Online · Privacy Policy
     </footer>
+
+    <script>
+        // Language toggle. Remembers choice in localStorage; honours ?lang= and
+        // the browser language on first visit (defaults to RU).
+        function setLang(lang) {
+            document.body.setAttribute('data-lang', lang);
+            document.documentElement.setAttribute('lang', lang);
+            document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('pp_lang', lang); } catch (e) {}
+        }
+        (function () {
+            var qs = new URLSearchParams(location.search).get('lang');
+            var saved = null;
+            try { saved = localStorage.getItem('pp_lang'); } catch (e) {}
+            var nav = (navigator.language || 'ru').toLowerCase().startsWith('en') ? 'en' : 'ru';
+            setLang(qs === 'en' || qs === 'ru' ? qs : (saved || nav));
+        })();
+    </script>
 
 </body>
 
